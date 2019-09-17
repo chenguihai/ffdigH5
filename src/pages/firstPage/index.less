@@ -1,0 +1,215 @@
+@import "../../css/default";
+
+.firstPage {
+  padding-bottom: 1rem;
+
+  .canvas-barrage {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    height: 3.6rem;
+    //height: 48%;
+    z-index: 10;
+  }
+
+  //.barrage {
+  //  height: 7.5rem;
+  //}
+
+  .blockImg {
+    display: block;
+    width: 100%;
+  }
+
+  .textImg {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    z-index: 10;
+    width: 77.6%;
+  }
+
+  .carouselImg {
+    width: 100%;
+  }
+
+  .titleH3 {
+    font-size: .3rem;
+    line-height: .3rem;
+    padding: .5rem 0 .3rem;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+//产品流行趋势
+.trendsWrap {
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: @c_fff;
+
+  .trendsImg {
+    width: 70%;
+  }
+
+  .title {
+    margin: 3.2% 0 3%;
+  }
+
+  .num {
+    font-size: .36rem;
+    font-weight: bold;
+
+  }
+}
+
+//产品流行趋势
+.hotColumn {
+  position: absolute;
+  top: .3rem;
+  left: 0;
+  padding-left: .3rem;
+  color: @c_fff;
+  z-index: 10;
+
+  .h3 {
+    font-weight: bold;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: .16rem;
+      height: .28rem;
+      background-color: @c_fff;
+      position: absolute;
+      left: -.3rem;
+      top: 0;
+      z-index: 10;
+    }
+  }
+
+  &.active {
+    color: @c_333;
+
+    .h3:before {
+      background-color: @c_333;
+    }
+  }
+
+  .timer {
+    margin: .16rem 0 .08rem;
+  }
+
+  .timer, .h3 {
+    font-size: .3rem;
+    line-height: .3rem;
+  }
+
+  .top100 {
+    font-size: .48rem;
+    line-height: .48rem;
+    font-weight: 800;
+  }
+}
+
+.flowStation {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 .06rem .3rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 .4rem .4rem;
+  margin-bottom: .6rem;
+  text-align: center;
+
+  .text {
+    margin: .2rem 0;
+  }
+
+  > a {
+    display: block;
+  }
+
+  .textP {
+    color: @c_666;
+  }
+
+}
+
+.flowTextAbs {
+  position: absolute;
+  top: 2.38rem;
+  left: 0;
+  right: 0;
+  color: @c_fff;
+  //left: 50%;
+  //transform: translateX(-50%);
+  text-align: center;
+
+  .flowIcon {
+
+  }
+
+  .flowH3 {
+    font-size: .3rem;
+    line-height: .3rem;
+    font-weight: bold;
+    margin: .22rem 0 .6rem;
+  }
+
+  .flowP {
+    margin-top: .2rem;
+  }
+}
+
+.moreBrands {
+  padding: .14rem 0 .3rem;
+  text-align: center;
+}
+
+.productBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.06rem 0 .4rem;
+  margin: .4rem auto .3rem;
+  height: .68rem;
+  border: .02rem solid @c_333;
+  color: @c_333;
+  background: url("../../img/site/returnBlack.png") no-repeat 1.87rem center;
+
+  &.active {
+    border-color: @c_fff;
+    color: @c_fff;
+    margin: 0;
+    background-image: url("../../img/site/returnWhite.png");
+  }
+}
+
+.siteAbs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.moreAbs {
+  position: absolute;
+  bottom: .4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.titleAbs {
+  position: absolute;
+  top: .3rem;
+  left: .3rem;
+  font-size: .3rem;
+  color: @c_000;
+  font-weight: bold;
+
+  &.active {
+    color: @c_fff;
+  }
+}

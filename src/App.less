@@ -1,0 +1,87 @@
+@import "./css/default";
+
+.tabBarWrap {
+  position: fixed;
+  height: 1rem;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+  background-color: @c_fff;
+  //.am-tab-bar-bar {
+  //  height: 1rem;
+  //
+  //  .am-tab-bar-tab-image {
+  //    width: 0.44rem;
+  //    height: 0.44rem;
+  //  }
+  //
+  .am-list-view-scrollview {
+    height: 100vh !important;
+  }
+
+  .am-tab-bar-tab-title {
+    margin-top: .1rem;
+    font-size: .22rem;
+  }
+}
+
+.tabBarUl {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 1rem;
+
+  .tabBarItem {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    height: 1rem;
+    .link{
+      padding: .13rem;
+    }
+    &.active {
+      .text {
+        color: @c_333;
+      }
+
+      .hotIcon {
+        .mixin_bg-update-img('../img/icon/foot-spput.png');
+      }
+
+      .globalIcon {
+        .mixin_bg-update-img('../img/icon/foot-homput.png');
+      }
+
+      .personalIcon {
+        .mixin_bg-update-img('../img/icon/foot-meput.png');
+      }
+    }
+  }
+
+  .text {
+    font-size: @font22;
+    color: @c_bbb;
+    margin-top: .06rem;
+  }
+
+  .hotIcon, .globalIcon, .personalIcon {
+    width: .4rem;
+    height: .4rem;
+    margin: 0 auto;
+  }
+
+  .hotIcon {
+    .mixin_bg-img('../img/icon/foot-sp.png');
+  }
+
+  .globalIcon {
+    .mixin_bg-img('../img/icon/foot-hom.png');
+  }
+
+  .personalIcon {
+    .mixin_bg-img('../img/icon/foot-me.png');
+  }
+}

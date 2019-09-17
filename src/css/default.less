@@ -1,0 +1,182 @@
+/** 常用色值 **/
+@c_999: #999;
+@c_666: #666;
+@c_000: #000;
+@c_ccc: #ccc;
+@c_fff: #fff;
+@c_333: #333;
+@c_888: #888;
+@c_bg: #f7f7f7;
+@c_bbb: #bbb;
+@c_primary: #ce4141;
+@c_Link: #27b7d7;
+//#6992EE
+
+@c_aaa: #aaa;
+@c_eee: #eee;
+@c_e8e8e8: #E8E8E8;
+@c_d9d9d9: #d9d9d9;
+@c_efefef: #efefef;
+@c_f5f5f5: #f5f5f5;
+@c_bfbfbf: #BFBFBF;
+@c_F0F4F7: #F0F4F7;
+@c_434343: #434343;
+@c_e4e4e4: #e4e4e4;
+@c_ac843a: #ac843a;
+@c_AA9773: #AA9773;
+@c_C7AD7B: #C7AD7B;
+@c_96A9FF: #96A9FF;
+@c_435BC2: #435BC2;
+@c_334699: #334699;
+@c_BFCBFF: #BFCBFF;
+@c_CED7FF: #CED7FF;
+@c_FFAAAA: #FFAAAA;
+@c_FFE537: #FFE537;
+
+/** 常用字体大小 **/
+@font34: 34px;
+
+@font32: .32rem;
+@font30: .3rem;
+@font28: .28rem;
+@font26: .26rem;
+@font24: .24rem;
+@font22: .22rem;
+//git push -u origin master
+.primary_btn(@h:24px,@b:12px,@c:@c_C7AD7B) {
+  box-sizing: border-box;
+  height: @h;
+  line-height: @h;
+  border: 1px solid @c;
+  color: @c;
+  border-radius: @b;
+}
+
+.primary_btn_active(@c:@c_C7AD7B) {
+  border: 1px solid @c;
+  color: @c;
+}
+
+.triangle(right,@tb:16px,@lr:10px,@c:@c_C7AD7B) {
+  border-color: transparent transparent transparent @c;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(bottom,@tb:16px,@lr:10px,@c:@c_C7AD7B) {
+  border-color: transparent transparent @c transparent;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(top,@tb:16px,@lr:10px,@c:@c_C7AD7B) {
+  border-color: @c transparent transparent transparent;
+  border-top-width: @tb;
+  border-left-width: @lr;
+  border-right-width: @lr;
+  border-bottom-width: @tb;
+}
+
+.triangle(@_,@tb:16px,@lr:10px,@c:@c_C7AD7B) {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.mixin_line-ellipses(@line-num: 1) {
+  //white-space: nowrap;
+  text-overflow: ellipsis;
+  //overflow: hidden;
+  //@supports(-webkit-line-clamp: 1) {
+  display: -webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: @line-num;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: normal;
+  //text-overflow: clip;
+  //}
+}
+
+.icon_fun(@w:14px,@h:14px,@c:@c_C7AD7B) {
+  width: @w;
+  font-size: @w;
+  height: @h;
+  line-height: @h;
+  color: @c;
+}
+
+.dividingLine(@w:14px,@m:14px) {
+  border-width: 0;
+  background: @c_888;
+  width: 1px;
+  height: @w;
+  margin: 0 @m;
+}
+
+.iconDelete(@w:14px,@c:#818d9a) {
+  cursor: pointer;
+  margin-left: 10px;
+  width: @w;
+  font-size: @w;
+  height: @w;
+  line-height: @w;
+  color: @c;
+}
+
+.mixin_line-ellipses(@line-num: 1) {
+  //white-space: nowrap;
+  text-overflow: ellipsis;
+  //overflow: hidden;
+  //@supports(-webkit-line-clamp: 1) {
+  display: -webkit-box;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: @line-num;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: normal;
+  //text-overflow: clip;
+  //}
+}
+
+.mixin_bg-image(@url:"user-queehg") {
+  @iconUrl2: "@2x.png";
+  background: url("@{url}@{iconUrl2}") no-repeat 0 0;
+  background-size: 100% 100%;
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    @iconUrl3: "@3x.png";
+    .mixin_bg-image(@url:"user-queehg") {
+      background: url("@{url}@{iconUrl3}") no-repeat 0 0;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.mixin_bg-img(@url:"user-queehg") {
+  background: url("@{url}") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.mixin_bg-update-img(@url:"user-queehg") {
+  background-image: url("@{url}");
+}
+
+.mixin_font(@font:.28rem) {
+  height: @font;
+  line-height: @font;
+  font-size: @font;
+}
+
+.whiteSpace(@h:.16rem) {
+  height: @h;
+}

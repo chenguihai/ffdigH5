@@ -1,0 +1,37 @@
+@import "../../css/default";
+
+.searChListWrap {
+  padding: 0 .3rem .2rem;
+  background-color: @c_fff;
+
+  &.height {
+    height: calc(~'100vh - 1.1rem');
+  }
+
+  .searchTitle {
+    display: flex;
+    font-size: @font26;
+    height: .56rem;
+    align-items: center;
+
+    .title {
+      flex: 1;
+    }
+  }
+
+  .searchUl {
+    display: flex;
+    flex-wrap: wrap;
+
+    .searchItem {
+      margin-top: .2rem;
+      margin-right: .2rem;
+      height: .5rem;
+      line-height: .5rem;
+      border-radius: .25rem;
+      padding: 0 .2rem;
+      font-size: @font24;
+      background-color: @c_eee;
+    }
+  }
+}

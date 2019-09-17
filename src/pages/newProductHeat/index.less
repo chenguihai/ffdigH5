@@ -1,0 +1,318 @@
+@import "../../css/default";
+
+.heatWrap {
+  background-color: @c_334699;
+  padding-top: .24rem;
+  height: calc(~'100vh - .24rem');
+  overflow: hidden;
+
+  &.noScroll {
+    overflow: hidden;
+  }
+
+  .statistics {
+    background-color: @c_334699;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .imgTitle {
+    display: inline-flex;
+    width: 78.8%;
+  }
+
+  .heatUl {
+    padding: 0 .3rem .4rem;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      color: @c_96A9FF;
+      margin: .17rem 0 .11rem;
+    }
+  }
+
+  .heatLiTop, .heatLi {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: .01rem solid @c_435BC2;
+  }
+
+  .heatLiTop {
+    height: .65rem;
+  }
+
+  .heatLi {
+    height: .52rem;
+  }
+
+  .barTop, .bar {
+    font-size: .24rem;
+    text-indent: .2rem;
+    margin-right: .2rem;
+    text-transform: capitalize;
+  }
+
+  .barTop {
+    background-color: #FFE9E9;
+    height: .5rem;
+    line-height: .5rem;
+    box-shadow: .05rem .05rem 0 #FFE9E9;
+    border-radius: .25rem;
+  }
+
+  .bar {
+    height: .3rem;
+    line-height: .3rem;
+    background-color: @c_BFCBFF;
+    color: @c_333;
+    border-radius: .15rem;
+  }
+
+  .num {
+    color: @c_fff;
+  }
+
+  .heatList {
+    background-color: @c_fff;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    //padding-top: .18rem;
+    padding-top: .01rem;
+    position: relative;
+    z-index: 10;
+    transition: all .5s ease-in-out;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .heatLine {
+    width: .6rem;
+    height: .08rem;
+    margin: 0 auto;
+    padding: .17rem 2rem .22rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: .6rem;
+      height: .08rem;
+      border-radius: .03rem;
+      background: @c_CED7FF;
+    }
+  }
+
+  //滑动导航栏
+  .heatNavWrap {
+    padding: 0 .05rem;
+    background: @c_fff;
+    height: .64rem;
+    overflow: hidden;
+    margin-bottom: .18rem;
+  }
+
+  .heatNav {
+    height: .7rem;
+    overflow-x: scroll;
+    white-space: nowrap; //可以强制目前布局而不让子元素自动换行
+    .item {
+      display: inline-flex;
+      align-items: center;
+      height: .64rem;
+      font-size: @font26;
+      padding: 0 0.25rem;
+      color: @c_bbb;
+      text-transform: capitalize;
+      position: relative;
+
+      &.active {
+        color: @c_334699;
+        font-weight: bold;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: .4rem;
+          height: .06rem;
+          background: @c_334699;
+          border-radius: .03rem;
+        }
+      }
+    }
+  }
+}
+
+.heatListUlTop {
+  padding: 0.1rem 4% 0.1rem;
+
+  &.active {
+    padding-bottom: .5rem;
+  }
+
+  &.scroll {
+    height: calc(~'100vh - 3.4rem');
+    overflow-y: auto;
+  }
+
+  .heatListLiTop {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .leftImg {
+    width: 26%;
+    padding-bottom: 29%;
+    //height: 2.2rem;
+    box-sizing: border-box;
+    border: .1rem solid @c_bbb;
+    background: no-repeat center;
+    background-size: cover;
+
+    .img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex: 1;
+    box-sizing: border-box;
+    border-bottom: .1rem solid @c_eee;
+    //height: 1.8rem;
+    padding: 4.63% 14.4% .1rem .2rem;
+    box-shadow: 0 0 .3rem 0 rgba(0, 0, 0, 0.1);
+
+    .name {
+      .mixin_line-ellipses();
+    }
+
+    .name, .cmtStar {
+      font-size: .24rem;
+      line-height: .24rem;
+      margin-bottom: .1rem;
+    }
+
+    .price {
+      font-size: .22rem;
+      line-height: .22rem;
+      margin-bottom: .2rem;
+    }
+
+    .cmtStar {
+      color: @c_bbb;
+      display: flex;
+      align-items: center;
+    }
+
+    .cmtStarIcon {
+      width: .24rem;
+      height: .23rem;
+      margin-right: 3.56%;
+      background: url("../../img/xingyou.png") no-repeat 0 center;
+      //background-size: .24rem .23rem;
+      background-size: 100%;
+
+      &:first-of-type {
+        margin-left: .1rem;
+      }
+
+      &.active {
+        background-image: url("../../img/xingk.png");
+      }
+    }
+
+    .cmtCount {
+      background: url("../../img/infoIcon.png") no-repeat 0 center;
+      background-size: .2rem .2rem;
+      font-size: .22rem;
+      line-height: .22rem;
+      text-indent: .3rem;
+    }
+
+    .topNum {
+      position: absolute;
+      bottom: .1rem;
+      right: 0.3rem;
+      z-index: 10;
+      width: .8rem;
+      height: .66rem;
+      //width: 20.89%;
+      //height: 37.534%;
+      background: no-repeat center;
+    }
+  }
+
+  .heatIcon {
+    position: absolute;
+    bottom: .73rem;
+    right: .4rem;
+    z-index: 10;
+    width: .37rem;
+    height: .33rem;
+    //margin: 0 .4rem 0 .13rem;
+    background: url('../../img/xingqing-icon-xin@2x.png') no-repeat center;
+  }
+
+  .barIcon {
+    position: absolute;
+    bottom: -.1rem;
+    left: 0;
+    z-index: 10;
+    height: .1rem;
+    background-color: @c_bbb;
+  }
+}
+
+.tipsInfo {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  height: 1.04rem;
+  padding-left: .3rem;
+  background: url("../../img/heat/di.png") no-repeat center;
+  background-size: 100% 1.04rem;
+
+  .text {
+    color: @c_fff;
+    font-size: .24rem;
+    flex: 1;
+  }
+
+  .boldFont {
+    font-size: .36rem;
+    line-height: .36rem;
+    color: @c_FFE537;
+  }
+
+  .btn {
+    text-align: center;
+    width: 28%;
+    padding: .38rem 0;
+    color: @c_fff;
+  }
+
+  a {
+    width: 100%;
+    display: inline-block;
+  }
+}

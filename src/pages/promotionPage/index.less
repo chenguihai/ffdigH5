@@ -1,0 +1,42 @@
+@import "../../css/default";
+
+.promotionWrap {
+  padding-bottom: 1rem;
+
+  .img, .defaultImg {
+    display: block;
+    width: 100%;
+  }
+
+  .topBtn, .bottomBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .topBtn {
+    bottom: .47rem;
+  }
+
+  .bottomBtn {
+    bottom: 1rem;
+  }
+
+  .seeMore {
+    position: absolute;
+    //top: 5.44rem;
+    top: 47%;
+    color: @c_333;
+    padding: .1rem;
+    border-bottom: .03rem solid @c_333;
+
+    &.left {
+      left: 8.53%;
+    }
+
+    &.right {
+      right: 8.53%;
+    }
+  }
+}
